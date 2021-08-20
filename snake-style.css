@@ -1,0 +1,317 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+#container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: absolute;
+  background: hsla(0, 0%, 0%, 0.35);
+}
+
+#for-table {
+  width: 800px;
+  height: 800px;
+}
+
+#for-score {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 1000px) {
+  #for-table {
+    width: 90vw;
+    height: 90vw;
+  }
+
+  #for-score {
+    font-size: 16px;
+  }
+
+  #help_move {
+    margin-top: 18px;
+  }
+}
+
+#table {
+  width: 100%;
+  height: 100%;
+  border-spacing: 1px 1px;
+  border: 5px solid rgb(121, 121, 121);
+}
+
+td {
+  background: rgb(224, 224, 224);
+}
+
+
+/* --Snake-- */
+.snake-body {
+  background: rgb(185, 38, 38);
+  z-index: 100000000;
+}
+
+#snake-eyes {
+  background: rgb(148, 9, 9);
+}
+
+#snake-ass {
+  background: rgb(206, 111, 111)
+}
+
+.snake-food {
+  background: rgb(4, 184, 28);
+}
+
+.snake-trap {
+  background: rgb(68, 68, 68);
+}
+/* --/Snake-- */
+
+
+/* --Menu-- */
+#for-menu {
+  position: absolute;
+  width: 250px;
+  height: 350px;
+  z-index: 2;
+}
+
+#menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px #000;
+  position: relative;
+}
+
+#menu label {
+  cursor: pointer;
+}
+
+#menu input {
+  cursor: pointer;
+}
+
+.menu-row {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+.menu-row h1 {
+  font-size: 30px;
+  font-weight: normal;
+  color: #000;
+}
+
+.menu-row:first-child {
+  z-index: 100;
+  position: relative;
+  box-shadow: 0 5px 25px #ccc;
+}
+
+.menu-row:nth-child(2) {
+  height: 60%;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+#menu-row-speed {
+  display: block;
+  width: 100%;
+  height: 50%;
+  margin-bottom: 40px;
+  margin-top: -15px;
+}
+
+#helper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+#helper div {
+  display: inline-block;
+  width: 100%;
+}
+
+#menu-row-speed p {
+  margin-bottom: 5px;
+}
+
+#menu-row-speed label {
+  font-size: 15px;
+  color: grey;
+}
+
+#menu-row-traps {
+  border-top: 1px dashed grey;
+  display: block;
+  width: 100%;
+  height: 50%;
+  padding-top: 15px;
+}
+
+#menu-row-traps div {
+  display: inline;
+}
+
+.menu-row:last-child {
+  box-shadow: 0 -5px 20px #ccc;
+}
+
+#start {
+  background: #fff;
+  border:0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 25px;
+  transition: 0.2s all ease-in-out;
+  outline: 0;
+  
+}
+
+#start:hover {
+  transition: 0.2s all ease-in-out;
+}
+
+/* --/Menu-- */
+
+
+/* --help_menu-- */
+#for-help_menu {
+  position: absolute;
+  width: 250px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+#help_menu {
+  background: #fff;
+  width: 100%;
+  height: 60%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px #000;
+}
+
+#help_menu .menu-row:nth-child(2) {
+  height: 35%;
+}
+
+#help_menu .menu-row:nth-child(2) p {
+  text-align: start;
+}
+#help_menu .menu-row:first-child {
+  height: 35%;
+  font-size: 18px;
+}
+
+#help_menu .menu-row:last-child {
+  height: 30%;
+  flex-direction: row;
+}
+
+#btn-new_game {
+  width: 50%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  cursor: pointer;
+  background: #fff;
+  transition: .2s all ease-in-out;
+}
+
+#btn-continue_game {
+  width: 50%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  cursor: pointer;
+  background: rgb(80, 80, 80);
+  transition: .2s all ease-in-out;
+  color: white;
+}
+
+
+/* --/help_menu-- */
+
+
+/* --animation-- */
+#help_move {
+  width: 798px;
+  height: 800px;
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.help_move-block {
+  width: 800px;
+  height: 800px;
+  border-radius: 800px;
+  position: absolute;
+}
+
+#left-animate {
+  left: -63%;
+}
+
+#right-animate {
+  left: 63%;
+} 
+
+#up-animate {
+  top: -63%;
+} 
+
+#down-animate {
+  top: 63%;
+} 
+
+/* --/animation-- */
